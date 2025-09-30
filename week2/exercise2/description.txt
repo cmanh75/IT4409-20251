@@ -1,0 +1,10 @@
+Trong quá trình tạo trang giới thiệu bản thân và trang thông tin lịch học, 
+trước hết em sử dụng cấu trúc chuẩn của HTML5 bắt đầu bằng <!DOCTYPE html>,
+sau đó khai báo các phần chính như <head> và <body>. Trong phần <head>, 
+em thêm tiêu đề trang bằng thẻ <title> và khai báo bảng mã UTF-8 để hỗ trợ 
+tiếng Việt. Trong phần <body>, em sử dụng các thẻ semantic như <header> 
+để chứa tiêu đề và thông tin sinh viên, <main> để chứa nội dung chính, 
+và <section> để chia từng phần nội dung rõ ràng. Em chèn ảnh chân dung bằng 
+thẻ <img> và thêm danh sách môn học với các thẻ <ul> và <li>. Đối với trang 
+lịch học, em tạo bảng bằng thẻ <table> và thêm tiêu đề bảng bằng thẻ <caption>. 
+Cuối cùng, em dùng <footer> để hiển thị MSSV và ngày tạo trang.
