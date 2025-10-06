@@ -1,0 +1,46 @@
+:root{
+--bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03);
+--radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#071027 0%, #081126 100%);}
+#navbar{position:fixed; top:0; left:0; right:0; height:64px; display:flex; align-items:center; justify-content:space-between; padding:0 1rem; z-index:1000; backdrop-filter: blur(6px);background: linear-gradient(180deg, rgba(6,8,15,0.6), rgba(6,8,15,0.35)); border-bottom:1px solid rgba(255,255,255,0.03);}
+#navbar .brand{font-weight:700; letter-spacing:0.6px; color:var(--accent)}
+#navbar nav{display:flex; gap:1rem}
+#navbar a{color:var(--muted); text-decoration:none; padding:0.5rem 0.6rem; border-radius:8px}
+#navbar a:hover{color:#fff; background:var(--glass)}
+main{padding-top:0}
+#welcome-section{height:100vh; display:flex; align-items:center}
+.welcome-inner{max-width:1100px;margin:0 auto;padding:3rem;display:flex;gap:2rem;align-items:center}
+.hero{flex:1}
+.hero h1{font-size:clamp(2.2rem,4vw,4rem); margin:0 0 1rem; line-height:1.05}
+.hero p{color:var(--muted); margin:0 0 1.5rem}
+.cta{display:flex; gap:0.6rem}
+.btn{background:var(--accent); color:#022; padding:0.6rem 0.9rem; border-radius:12px; text-decoration:none; font-weight:600}
+.photo{width:220px;height:220px;border-radius:20px;background:linear-gradient(135deg,#082035,#04202e);display:flex;align-items:center;justify-content:center;color:var(--muted);box-shadow: 0 10px 30px rgba(2,6,23,0.6)}
+#projects{padding:4rem 1rem}
+#projects .container{max-width:1100px;margin:0 auto}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-tile{background:var(--card); padding:1rem; border-radius:12px; min-height:140px; display:flex; flex-direction:column; justify-content:space-between}
+.project-tile h3{margin:0 0 .4rem}
+.project-tile p{margin:0 0 .8rem; color:var(--muted)}
+.project-tile a{align-self:flex-start; text-decoration:none; font-weight:600}
+#contact{padding:4rem 1rem; background:var(--card);}
+#contact .container{max-width:700px; margin:0 auto; text-align:center;}
+#contact h2{font-size:2rem; margin-bottom:1rem;}
+#contact p{color:var(--muted); margin:0.5rem 0;}
+#contact a{color:var(--accent); text-decoration:none; font-weight:600;}
+#contact a:hover{text-decoration:underline;}
+footer{padding:2rem 1rem;color:var(--muted);text-align:center}
+@media (max-width:900px){
+.projects-grid{grid-template-columns:repeat(2,1fr)}
+.welcome-inner{flex-direction:column; text-align:center}
+.photo{margin-top:1rem}
+#navbar nav{display:none}
+#navbar .menu-toggle{display:inline-block}
+}
+@media (max-width:520px){
+.projects-grid{grid-template-columns:1fr}
+#navbar{height:56px}
+.hero h1{font-size:2rem}
+}
