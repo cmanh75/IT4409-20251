@@ -1,0 +1,26 @@
+*Cấu trúc mã nguồn
+    /week6
+    │
+    ├── index.html      -> Giao diện chính (ô nhập, nút tra cứu, bảng kết quả)
+    ├── style.css       -> Định dạng giao diện, bảng và trạng thái tải
+    ├── data.js         -> Dữ liệu giả lập (sinh viên, học phần, kết quả)
+    └── main.js         -> Logic xử lý chính (Promise, async/await, hiển thị, cache)
+* Quy trình chi tiết:
+    Kiểm tra cache trong localStorage
+    Nếu dữ liệu đã được lưu trước đó, hiển thị ngay lập tức.
+    Sau đó, gọi refreshFromNetwork() để cập nhật ngầm dữ liệu mới nhất.
+    Nếu chưa có trong cache:
+    Gọi fetchSinhVienById(sid) để lấy thông tin sinh viên.
+    Gọi fetchKetQuaBySid(sid) để lấy danh sách học phần đã học.
+    Dùng Promise.all() để chờ lấy tên và tín chỉ từ fetchHocPhanByCid() cho từng môn.
+    Tính điểm chữ bằng numericToLetter().
+    Hiển thị kết quả bằng renderTable().
+    Lưu toàn bộ kết quả vào localStorage.
+* Xử lý lỗi:
+    Nếu sinh viên không tồn tại hoặc dữ liệu rỗng thì hiển thị thông báo lỗi.
+    Toàn bộ phần này được bọc trong try...catch.
+    Ẩn trạng thái tải khi hoàn tất.
+* Cách xử lý bất đồng bộ
+    Ứng dụng kết hợp Promise và async/await để:
+    Dễ dàng mô phỏng độ trễ của server.
+    Có thể chờ dữ liệu tuần tự hoặc đồng thời (Promise.all).

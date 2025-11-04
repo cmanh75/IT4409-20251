@@ -1,0 +1,67 @@
+body {
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+max-width: 960px;
+}
+
+
+label,
+input,
+button {
+font-size: 1rem;
+}
+
+
+input {
+padding: 8px;
+margin-right: 8px;
+border-radius: 6px;
+border: 1px solid #cbd5e1;
+}
+
+
+button {
+padding: 8px 12px;
+border-radius: 8px;
+border: none;
+background: #2563eb;
+color: white;
+cursor: pointer;
+}
+
+
+button[disabled] {
+opacity: 0.5;
+cursor: not-allowed;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 12px;
+}
+
+
+th,
+td {
+padding: 8px;
+border-bottom: 1px solid #e6eef8;
+text-align: left;
+}
+
+
+th {
+background: #f1f7ff;
+}
+
+
+.muted {
+color: #6b7280;
+font-size: 0.95rem;
+}
+
+
+.loader {
+font-style: italic;
+color: #2563eb;
+}

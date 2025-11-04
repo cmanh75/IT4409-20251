@@ -1,0 +1,72 @@
+const sinhvien = [
+  { sid: "20224875", name: "Nguyễn Phi Cường Mạnh", dob: "2004-05-07" }
+];
+
+const hocphan = [
+  { cid: "EM1170", name: "Pháp luật đại cương", credits: 2 },
+  { cid: "FL1132", name: "Tiếng Anh cơ sở 2", credits: 0 },
+  { cid: "IT2000", name: "Nhập môn Công nghệ thông tin và Truyền thông", credits: 3 },
+  { cid: "MI1111", name: "Giải tích I", credits: 4 },
+  { cid: "MI1141", name: "Đại số", credits: 4 },
+  { cid: "MI1121", name: "Giải tích II", credits: 3 },
+  { cid: "IT1110", name: "Tin học đại cương", credits: 4 },
+  { cid: "IT3011", name: "Cấu trúc dữ liệu và Thuật toán", credits: 2 },
+  { cid: "IT3030", name: "Kiến trúc máy tính", credits: 3 },
+  { cid: "MI2020", name: "Xác suất thống kê", credits: 3 },
+  { cid: "IT3040", name: "Kỹ thuật lập trình", credits: 2 },
+  { cid: "IT3070", name: "Nguyên lý hệ điều hành", credits: 3 },
+  { cid: "IT3080", name: "Mạng máy tính", credits: 3 },
+  { cid: "IT3100", name: "Lập trình hướng đối tượng", credits: 2 },
+  { cid: "IT3150", name: "Đồ án I", credits: 2 },
+  { cid: "IT3160", name: "Nhập môn Trí tuệ nhân tạo", credits: 3 },
+  { cid: "IT3170", name: "Thuật toán ứng dụng", credits: 2 },
+  { cid: "IT3180", name: "Nhập môn Công nghệ phần mềm", credits: 3 },
+  { cid: "IT2030", name: "Viết và trình bày kỹ thuật", credits: 3 },
+  { cid: "IT3120", name: "Phân tích và thiết kế hệ thống", credits: 2 },
+  { cid: "IT3190", name: "Nhập môn Học máy và Khai phá dữ liệu", credits: 3 },
+  { cid: "IT4015", name: "Nhập môn An toàn thông tin", credits: 2 },
+  { cid: "IT4244", name: "Quản trị dự án CNTT", credits: 2 },
+  { cid: "IT4441", name: "Giao diện và Trải nghiệm người dùng", credits: 3 },
+  { cid: "SSH1111", name: "Triết học Mác – Lênin", credits: 3 },
+  { cid: "SSH1131", name: "Chủ nghĩa xã hội khoa học", credits: 2 },
+  { cid: "SSH1151", name: "Tư tưởng Hồ Chí Minh", credits: 2 },
+  { cid: "ED3220", name: "Kỹ năng mềm", credits: 2 },
+  { cid: "PE2101", name: "Bóng chuyền 1", credits: 0 },
+  { cid: "PE2261", name: "Karatedo", credits: 0 },
+  { cid: "PE2401", name: "Bóng bàn 1", credits: 0 }
+];
+
+const ketqua = [
+  { sid: "20224875", cid: "EM1170", term: "20221", score: 6.5 },
+  { sid: "20224875", cid: "FL1132", term: "20221", score: 7.8 },
+  { sid: "20224875", cid: "IT2000", term: "20221", score: 9.2 },
+  { sid: "20224875", cid: "MI1111", term: "20221", score: 6.0 },
+  { sid: "20224875", cid: "MI1141", term: "20221", score: 8.1 },
+  { sid: "20224875", cid: "IT1110", term: "20222", score: 9.0 },
+  { sid: "20224875", cid: "MI1121", term: "20222", score: 8.8 },
+  { sid: "20224875", cid: "IT3011", term: "20231", score: 9.5 },
+  { sid: "20224875", cid: "IT3030", term: "20231", score: 9.8 },
+  { sid: "20224875", cid: "MI2020", term: "20231", score: 8.4 },
+  { sid: "20224875", cid: "IT3040", term: "20232", score: 7.3 },
+  { sid: "20224875", cid: "IT3070", term: "20232", score: 6.2 },
+  { sid: "20224875", cid: "IT3080", term: "20232", score: 8.0 },
+  { sid: "20224875", cid: "IT3100", term: "20232", score: 8.8 },
+  { sid: "20224875", cid: "SSH1131", term: "20232", score: 7.2 },
+  { sid: "20224875", cid: "IT3090", term: "20241", score: 9.5 },
+  { sid: "20224875", cid: "IT3150", term: "20241", score: 9.0 },
+  { sid: "20224875", cid: "IT3160", term: "20241", score: 8.2 },
+  { sid: "20224875", cid: "IT3170", term: "20241", score: 9.7 },
+  { sid: "20224875", cid: "IT3180", term: "20241", score: 8.5 },
+  { sid: "20224875", cid: "PE2101", term: "20241", score: 6.5 },
+  { sid: "20224875", cid: "IT2030", term: "20242", score: 8.3 },
+  { sid: "20224875", cid: "IT3120", term: "20242", score: 7.8 },
+  { sid: "20224875", cid: "IT3190", term: "20242", score: 8.1 },
+  { sid: "20224875", cid: "IT4015", term: "20242", score: 9.0 },
+  { sid: "20224875", cid: "IT4244", term: "20242", score: 8.4 },
+  { sid: "20224875", cid: "IT4441", term: "20242", score: 9.0 },
+  { sid: "20224875", cid: "ED3220", term: "20232", score: 9.0 },
+  { sid: "20224875", cid: "SSH1111", term: "20222", score: 8.0 },
+  { sid: "20224875", cid: "SSH1151", term: "20221", score: 7.5 }
+];
+
+console.log("Dữ liệu đã được tải:", sinhvien.length, "sinh viên,", hocphan.length, "học phần,", ketqua.length, "bản ghi.");

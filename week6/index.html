@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Grade Lookup (Async JS)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="card">
+<h1>Student Grade Lookup (Async / Promise / localStorage)</h1>
+<p class="muted">
+Enter student ID (sid) and click <strong>Lookup</strong>. Data is simulated
+with setTimeout to mimic network calls.
+</p>
+
+
+<div>
+<label for="sid">Student ID:</label>
+<input id="sid" placeholder="20224875" />
+<button id="btnLookup">Lookup</button>
+<span id="status"></span>
+</div>
+
+
+<div id="studentInfo" style="margin-top: 12px"></div>
+
+
+<div id="results"></div>
+</div>
+
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
